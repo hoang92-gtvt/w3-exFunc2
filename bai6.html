@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra số nguyên dương</title>
+</head>
+<body>
+<script>
+    let number6= parseInt(prompt('Nhập giá trị số kiểm tra'));
+    function checkNumber(number){
+        if(isNaN(number)){
+            return false;
+        }else   {if (number<0){
+                return false;
+                }else
+                return true;
+        }
+    }
+    if(checkNumber(number6)){
+        alert('Ký tự nhập là số nguyên dương')
+    }else alert('ký tự nhập là chữ')
+
+
+</script>
+
+</body>
+</html>

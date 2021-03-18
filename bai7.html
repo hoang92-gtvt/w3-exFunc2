@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đổi vị trí</title>
+</head>
+<body>
+    <script>
+        let number1=parseInt(prompt('Số nguyên 1'))
+        let number2=parseInt(prompt('so nguyen 2'))
+        function jump(a,b){
+            a=a+b;
+            b=a-b;
+            a=a-b;
+            return a + 'và'+ b;
+        }
+        alert(jump(number1,number2));
+    </script>
+</body>
+</html>

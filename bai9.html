@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra ký tự trong mảng</title>
+</head>
+<body>
+    <script>
+        function inputArray(){
+            let soluong =parseInt(prompt('Nhập số lượng phần tử'));
+            let arr5=[];
+            for (let i = 0; i <soluong ; i++) {
+                arr5[i] = prompt('Nhập giá trị phần tử '+i);
+            }
+            console.log(arr5);
+
+            return arr5;
+        }
+        function checkElement(arr,element){
+            // let element = prompt('Nhập từ khóa cần tìm');
+            let count=0;
+            for (let i = 0; i < arr.length; i++) {
+                if(arr[i]===element){
+                    count++
+                }
+
+            }
+            if(count>0) {return element,count;}
+            else {return -1;}
+        }
+        let arr9= inputArray();
+        let element = prompt('Nhập từ khóa cần tìm');
+        checkElement(arr9, element);
+        alert(checkElement(arr9, element));
+
+    </script>
+</body>
+</html>

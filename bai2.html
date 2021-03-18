@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính diện tích</title>
+</head>
+<body>
+    <script>
+
+        let rad=prompt('Nhập giá trị bán kính đường tròn')
+
+        function setArea(radius){
+            let Area= 3.14*(radius*radius)/4;
+            return Area;
+        }
+        function setLength(radius){
+            let Length=2*3.14*radius;
+            return Length;
+        }
+
+        alert(setArea(rad) + 'và'+ setLength(rad));
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra ký tự số</title>
+</head>
+<body>
+    <script>
+        let number4 = parseInt(prompt('Nhập giá trị số kiểm tra'));
+        function checkNumber(number){
+            if(isNaN(number)){
+                return false;
+            }else{
+                return true;
+            }
+        }
+        if(checkNumber(number4)){
+            alert('Ký tự nhập là số')
+        }else alert('ký tự nhập là chữ')
+
+
+    </script>
+
+</body>
+</html>

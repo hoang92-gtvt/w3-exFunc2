@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đảo ngược mảng</title>
+</head>
+<body>
+    <script>
+        function inputNumber(){
+            let soluong =parseInt(prompt('Nhập số lượng phần tử'));
+            if(!checkNumber(soluong)){
+                //inputNumber();
+                alert('Nhập giá trị số nguyên');
+                return inputNumber();
+            }
+            let arr5=[];
+            let check_1 =false;
+            for (let i = 0; i <soluong ; i++) {
+                arr5[i] = parseInt(prompt('Nhập giá trị phần tử '+i));
+                if(!checkNumber(arr5[i])){
+                    //continue;
+                    return inputNumber();
+                }
+
+            }
+            console.log(arr5);
+            return arr5;
+        }
+        function checkNumber(number){
+            if(isNaN(number)){
+                return false;
+            }else{
+                return true;
+            }
+        }
+
+        function setReveser(array){
+            console.log(array);
+
+            for (let i = 0; i <= (array.length)/2; i++) {
+                    let temp =array[i]
+                    array[i]=array[array.length-1-i];
+                    array[array.length-1-i]=temp;
+            }
+            return array;
+
+        }
+        let arr8=inputNumber();
+        console.log(arr8);
+        console.log(setReveser(arr8));
+
+
+    </script>
+
+</body>
+</html>

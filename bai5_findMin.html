@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm Min</title>
+</head>
+<body>
+
+    <script>
+
+        function inputNumber(){
+            let soluong =parseInt(prompt('Nhập số lượng phần tử'));
+            if(!checkNumber(soluong)){
+                //inputNumber();
+                alert('Nhập giá trị số nguyên');
+                return inputNumber();
+            }
+            let arr5=[];
+            let check_1 =false;
+            for (let i = 0; i <soluong ; i++) {
+                arr5[i] = parseInt(prompt('Nhập giá trị phần tử '+i));
+                if(!checkNumber(arr5[i])){
+                    //continue;
+                    return inputNumber();
+                }
+
+            }
+            console.log(arr5);
+            return arr5;
+        }
+        function checkNumber(number){
+            if(isNaN(number)){
+                return false;
+            }else{
+                return true;
+            }
+        }
+
+        function findMin(array){
+            let min=array[0];
+            for (let i = 1; i <array.length ; i++) {
+                if (array[i]<min){
+                    min=array[i];
+                }
+            }
+            return min;
+        }
+        let k= findMin(inputNumber());
+        console.log(k);
+
+    </script>
+
+</body>
+</html>
